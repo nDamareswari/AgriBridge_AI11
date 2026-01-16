@@ -6,12 +6,12 @@ from streamlit_mic_recorder import mic_recorder
 # --- 1. SETTINGS ---
 st.set_page_config(page_title="AgriBridge AI", page_icon="🌾", layout="wide")
 
-# --- 2. FULL MULTI-LANGUAGE DICTIONARY ---
+# --- 2. MULTI-LANGUAGE DICTIONARY ---
 LANG_DATA = {
     "English": {
         "home": "Home", "farmer_tab": "Hire Labor", "labor_tab": "Find Work", "market_tab": "Market", "rent_tab": "Rentals", "lease_tab": "Land Lease",
         "name": "Full Name", "loc": "Village", "addr": "Full Address", "phone": "Phone", "crop": "Crop Name", "price": "Price", "qty": "Quantity", "submit": "Submit Details", 
-        "call": "📞 Call Now", "near_me": "Search Village", "workers": "Workers Needed", "work_type": "Work Type / Skills", "last_date": "Last Date/Expiry", "days": "Rental Days", "house": "House?", "owner": "Owner", "m_name": "Machine Name", "reg_worker": "Register as Worker", "avail_lab": "Available Laborers", "jobs_need": "Jobs Needing Workers"
+        "call": "📞 Call Now", "near_me": "Search Village", "workers": "Workers Needed", "work_type": "Work Type", "last_date": "Last Date/Expiry", "days": "Rental Days", "house": "House?", "owner": "Owner", "m_name": "Machine Name", "reg_worker": "Register as Worker", "avail_lab": "Available Laborers", "jobs_need": "Jobs Needing Workers"
     },
     "Telugu (తెలుగు)": {
         "home": "హోమ్", "farmer_tab": "కూలీలు కావాలి", "labor_tab": "పని కావాలి", "market_tab": "మార్కెట్", "rent_tab": "యంత్రాలు", "lease_tab": "కౌలు భూమి",
@@ -51,12 +51,10 @@ def voice_input_field(label, key):
     return text
 
 # --- 5. PAGES ---
-
 if menu == T["home"]:
     st.markdown("<h1 style='text-align: center; color: green;'>🌾 AgriBridge AI</h1>", unsafe_allow_html=True)
     st.divider()
     st.write("### Welcome / స్వాగతం / स्वागत है")
-    st.write("A 2-way marketplace for Farmers and Laborers.")
 
 elif menu == T["farmer_tab"]:
     st.header(f"👨‍🌾 {T['farmer_tab']}")
